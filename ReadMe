@@ -1,0 +1,3 @@
+In order to use this program you must have pyserial and speed-cli installed.
+Pyserial: http://pyserial.readthedocs.io/en/latest/pyserial.html
+Speed-cli: https://github.com/sivel/speedtest-cli

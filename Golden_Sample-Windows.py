@@ -17,7 +17,7 @@ h1={'X-M2X-KEY': '%s' % (apikey)}
 h2={'X-M2X-KEY': '%s' % (apikey), 'Content-Type': 'application/json'}
 url='http://api-m2x.att.com/v2/devices/'
 jsonp='?pretty=true'
-#Insert series ot AT Commands to exexute
+#Insert series ot AT Commands to be exexute executed.
 AT_COMMANDS=["AT+CSQ\r","AT+CREG=2\r","AT+CREG?\r","ATI\r","AT+ICCID\r"]
 #Stored AT responses
 AT_RESPONSES=[]
@@ -155,7 +155,7 @@ else:
 #print("Access Technology:",tech,".")
 
 
-
+#Converts local areacode from Hex to int.
 loc_area_code = int(loc_area_code, 16) #Hex to str.
 areacode= "The local area code is",loc_area_code,"."
 #print(areacode)
@@ -179,9 +179,11 @@ while z==0:
                 print (i)
                 time.sleep(1)
                 z=0
+#Stream dictionary.
 streamvalue={"Device_Info":dev ,"ICCID":ICCID,"Signal":csq,"RegStat":regstat,"AccessTech":acctech,"Local_Code":loc_area_code,"cellid":cellid,"Stream":test}
+#Name of streams/
 streams=["Device_Info","ICCID","Signal","RegStat","AccessTech","Local_Code","cellid","Stream"]
-
+#Changes the action to post to individual streams.
 for b in streams:
     action='/streams/%s/value' % (b)  # Action for updating a stream with data
     postm2x(b,streamvalue[b])

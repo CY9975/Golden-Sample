@@ -4,3 +4,18 @@ Pyserial: http://pyserial.readthedocs.io/en/latest/pyserial.html
 Speed-cli: https://github.com/sivel/speedtest-cli
 
 Golden_Sample-Windows
+
+Create a new m2x device with the following streams:Device_Info,ICCID,Signal,RegStat,AccessTech,Local_Code,cellid,Stream
+
+Follow on screen prompts.
+
+You will be asked for device id and apikey (which can be found on m2x).
+
+You will also need the the device com port which can be found in device manager under "Ports(COM & LPT)" and to open Connection Manager.
+
+All results will be posted to M2X/
+
+
+
+
+

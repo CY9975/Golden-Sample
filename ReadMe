@@ -5,7 +5,7 @@ Speed-cli: https://github.com/sivel/speedtest-cli
 
 Golden_Sample-Windows
 
-Create a new m2x device with the following streams:Device_Info,ICCID,Signal,RegStat,AccessTech,Local_Code,cellid,Stream
+Create a new m2x device with the following streams as non-numeric values:Device_Info,ICCID,Signal,RegStat,AccessTech,Local_Code,cellid,Stream
 
 Follow on screen prompts.
 

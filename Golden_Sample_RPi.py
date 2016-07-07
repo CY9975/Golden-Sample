@@ -29,12 +29,14 @@ while z==0:
                 z=0
 
 
-dev0ID='75cea730801b44cf51fd965a6743eb8c'
-h1={'X-M2X-KEY': '27501ea30c056dcd23533596fb469f71'}
-h2={'X-M2X-KEY': '27501ea30c056dcd23533596fb469f71', 'Content-Type': 'application/json'}
+STREAMID=input('Enter DEVICE ID from M2X:')
+apikey=input('Enter API KEY from M2X:')
+dev0ID=STREAMID
+h1={'X-M2X-KEY': '%s' % (apikey)}
+h2={'X-M2X-KEY': '%s' % (apikey), 'Content-Type': 'application/json'}
 url='http://api-m2x.att.com/v2/devices/'
 jsonp='?pretty=true'
-
+#turns off internet
 netoff=os.popen("sudo ifconfig rmnet_usb0 down")
 time.sleep(5)
 #Insert series ot AT Commands to exexute
@@ -183,7 +185,7 @@ print(areacode)
 print("The cellid is", cellid ,".")
 
 #ser.close()#Making sure serial is closed(not nessesary)
-
+#turns on internet
 neton=os.popen("sudo ifconfig rmnet_usb0 up")
 time.sleep(5)
 
